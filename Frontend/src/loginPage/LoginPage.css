@@ -1,0 +1,172 @@
+/* LoginPage.css */
+
+/* 1. Global Reset & Variables */
+:root {
+  --primary: #3b82f6;          
+  --primary-hover: #1d4ed8;
+  --text-dark: #111827;
+  --text-gray: #6b7280;
+  --border-light: #e5e7eb;     
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box; 
+}
+
+/* 2. Vital: Force html, body, and the React root to take full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--white);
+}
+
+/* 3. Main Container: Now guaranteed to fill the screen */
+.login-container {
+  min-height: 100%;          /* Fallback */
+  height: 100vh;             /* Force full viewport height */
+  width: 100vw;              /* Force full viewport width */
+  display: flex;
+  align-items: center;       /* Vertical Center */
+  justify-content: center;   /* Horizontal Center */
+  background-color: var(--white);
+}
+
+/* 4. The Login Box */
+.login-box {
+  width: 100%;
+  max-width: 420px;          /* Slightly wider for better spacing */
+  padding: 40px;
+  /* Optional: Remove border/shadow if you want it purely flat on the white bg.
+     Currently keeping it subtle so the form doesn't "float" invisibly. */
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05); 
+  background-color: var(--white);
+  
+  /* Ensure it doesn't touch edges on small mobile screens */
+  margin: 20px; 
+}
+
+/* 5. Logo Area */
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.logo-placeholder {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 16px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.app-name {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.app-tagline {
+  font-size: 14px;
+  color: var(--text-gray);
+  margin-top: 6px;
+}
+
+/* 6. Form Styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* More breathing room between inputs */
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.input-field {
+  width: 100%; /* Ensures input fills the box width */
+  color: #111827;
+  padding: 14px 16px;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fafafa;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.input-field:focus {
+  background-color: var(--white);
+  color: #111827;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Password Row */
+.password-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.link {
+  font-size: 13px;
+  color: var(--primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 500;
+}
+
+.register-area{
+  display:flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.register-text{
+  color:black;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+.submit-button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: var(--primary-hover);
+}
