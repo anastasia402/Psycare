@@ -38,7 +38,7 @@ public class TherapistService {
         therapist.setEmail(request.getEmail());
         therapist.setPassword(passwordEncoder.encode(request.getPassword()));
         therapist.setPhone(request.getPhone());
-        therapist.setAge(request.getAge());
+        therapist.setBirthDate(request.getDob());
         therapist.setLicenseNumber(request.getLicenseNumber());
 
         therapist.setEnabled(false);
