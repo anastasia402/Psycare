@@ -71,7 +71,7 @@ public class PatientInviteService {
 
         patient.setName(request.getName());
         patient.setSurname(request.getSurname());
-        patient.setAge(request.getAge());
+        patient.setBirthDate(request.getDob());
         patient.setPhone(request.getPhone());
 
         invite.setUsed(true);

@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 @Entity
 @Table(name = "Users")
 @Data
@@ -33,10 +36,10 @@ public class User {
     private String surname;
 
     @Column(nullable = true)
-    private Integer age;
-
-    @Column(nullable = true)
     private String phone;
 
     private boolean enabled = false;
+
+    @Column(nullable = true)
+    private LocalDate birthDate;
 }
